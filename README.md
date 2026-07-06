@@ -1,64 +1,66 @@
 # 📊 AtliQ Hardware Business Intelligence Project
 
-> An end-to-end Business Intelligence project built using **Power BI**, following industry-standard BI practices including data modeling, business understanding, KPI analysis, and dashboard development.
+> An end-to-end Business Intelligence project built using **Power BI** to transform business data into meaningful insights through data modeling, validation, DAX, and interactive dashboards.
 
 ---
 
-# 🚀 Project Status
-
-**Current Phase:** Foundation & Data Modeling (Version 1.0)
-
-Completed:
-
-- ✅ Business Understanding
-- ✅ Data Exploration
-- ✅ Data Model Understanding
-- ✅ Date Dimension Design
-- ✅ Fiscal Calendar Implementation
-
-Upcoming:
-
-- ⏳ Data Validation
-- ⏳ Data Cleaning (Power Query)
-- ⏳ Data Modeling & Relationships
-- ⏳ DAX Measures
-- ⏳ Executive Dashboard Development
-- ⏳ Business Insights & Recommendations
-
----
-
-# 🎯 Project Objective
+## 🎯 Project Objective
 
 AtliQ Hardware is a multinational computer hardware manufacturer operating across multiple countries and sales channels.
 
-The objective of this project is to transform raw business data into actionable insights that help stakeholders answer strategic business questions such as:
-
-- Which markets generate the highest revenue?
-- Which customer channels are most profitable?
-- How does Gross Margin vary across products and regions?
-- How accurate are sales forecasts?
-- Which business areas require operational improvement?
+The objective of this project is to build a robust Business Intelligence solution that helps stakeholders answer strategic business questions related to sales, profitability, customer performance, product performance, and business growth.
 
 ---
 
-# 🏢 Business Overview
+## 🚀 Current Progress
 
-### Customer Channels
+### ✅ Completed
 
-- Retailers
-  - Brick & Mortar
-  - E-commerce
+- Business Understanding
+- Data Collection
+- Data Exploration
+- Understanding Fact & Dimension Tables
+- Date Dimension Design
+- Fiscal Calendar Implementation
 
-- Direct
-  - AtliQ Exclusive Stores
-  - Official Website
-  - Mobile App
+### 🔄 In Progress
 
-- Distributors
+- Data Validation
+
+### ⏳ Upcoming
+
+- Data Cleaning (Power Query)
+- Data Modeling
+- Relationships
+- DAX Measures
+- Dashboard Development
+- Business Insights
+- Executive Presentation
 
 ---
 
-# 🗂 Dataset Overview
+## 🏢 Business Overview
+
+AtliQ Hardware sells computer hardware products through three primary sales channels:
+
+### Retailers
+
+- Brick & Mortar Stores
+- E-commerce Platforms
+
+### Direct Sales
+
+- AtliQ Exclusive Stores
+- Official Website
+- Mobile Application
+
+### Distributors
+
+Large distributors supplying products to smaller retailers.
+
+---
+
+## 🗃 Dataset Overview
 
 ### Dimension Tables
 
@@ -79,11 +81,11 @@ The objective of this project is to transform raw business data into actionable 
 
 ---
 
-# 📅 Date Dimension
+## 📅 Date Dimension
 
-A custom Date Dimension was designed instead of relying solely on transaction dates.
+A custom Date Dimension was created to support consistent time-based analysis across the entire data model.
 
-### Implemented Columns
+### Columns Implemented
 
 - Date
 - Day
@@ -100,8 +102,6 @@ A custom Date Dimension was designed instead of relying solely on transaction da
 
 AtliQ follows a fiscal calendar beginning on **1 September**.
 
-Fiscal Quarter Mapping:
-
 | Fiscal Quarter | Months               |
 | -------------- | -------------------- |
 | FQ1            | September – November |
@@ -111,87 +111,52 @@ Fiscal Quarter Mapping:
 
 ---
 
-# 🧠 Key Learning Outcomes (Version 1.0)
+## 🧠 Key Learning Outcomes
 
-### Business Intelligence Mindset
+During this phase, the following Business Intelligence concepts were explored:
 
-- Business Intelligence is about solving business problems, not building charts.
-- Every dashboard should answer a business question.
-- Business understanding comes before visualization.
-
-### Data Modeling
-
-- Fact Tables record business events.
-- Dimension Tables describe business entities.
-- Relationships should be built using stable keys rather than descriptive fields.
-
-### Financial Concepts
-
-- Gross Price
-- Pre-Invoice Deductions
-- Post-Invoice Deductions
-- Net Sales
-- Cost of Goods Sold (COGS)
-- Gross Margin
-
-### Date Dimension
-
-Learned why enterprise BI models use a dedicated Date Dimension to support:
-
-- Calendar reporting
-- Fiscal reporting
-- Time Intelligence
-- Consistent filtering
-- Business-friendly analysis
+- Business Understanding before Dashboard Development
+- Fact vs Dimension Tables
+- Business Process Thinking
+- Data Modeling Fundamentals
+- Calendar vs Fiscal Calendar
+- Date Dimension Design
+- Business KPI Fundamentals
+- Analyst Mindset
 
 ---
 
-# 🛠 Tools & Technologies
+## 🛠 Technology Stack
 
 - Power BI Desktop
 - DAX
 - MySQL
-- Power Query _(Upcoming)_
 - GitHub
 
 ---
 
-# 📌 Repository Roadmap
+## 📈 Project Roadmap
 
-```
-AtliQ-Hardware-BI-Project
-│
-├── README.md
-├── BI_Analyst_Notebook.md
-├── Dashboard.pbix
-├── Dataset/
-├── Images/
-├── DAX/
-└── Documentation/
-```
-
----
-
-# 📈 Current Progress
-
-| Module                 | Status |
-| ---------------------- | ------ |
-| Business Understanding | ✅     |
-| Data Collection        | ✅     |
-| Data Exploration       | ✅     |
-| Date Dimension         | ✅     |
-| Data Validation        | ⏳     |
-| Data Cleaning          | ⏳     |
-| Data Modeling          | ⏳     |
-| DAX Measures           | ⏳     |
-| Dashboard Design       | ⏳     |
-| Business Insights      | ⏳     |
+- ✅ Business Understanding
+- ✅ Data Exploration
+- ✅ Date Dimension
+- ⏳ Data Validation
+- ⏳ Power Query
+- ⏳ Data Modeling
+- ⏳ DAX
+- ⏳ Dashboard Development
+- ⏳ Business Storytelling
+- ⏳ Executive Presentation
 
 ---
 
-# 🎯 Project Vision
+## 📚 Documentation
 
-The goal of this project is not only to build an interactive Power BI dashboard but also to develop a strong Business Intelligence mindset by understanding the business context, designing an efficient data model, validating data quality, and communicating insights that support better business decisions.
+This repository contains:
+
+- `README.md` — Project Overview
+- `BI_Analyst_Notebook.md` — Business Intelligence Learning Notes
+- `CHANGELOG.md` — Project Progress Log
 
 ---
 
@@ -199,4 +164,4 @@ The goal of this project is not only to build an interactive Power BI dashboard 
 
 **Saurav Verma**
 
-This repository documents my journey of learning and applying Business Intelligence concepts through a real-world Power BI case study based on AtliQ Hardware.
+This repository documents my journey of learning Business Intelligence by solving a real-world Power BI case study.
