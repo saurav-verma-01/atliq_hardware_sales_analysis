@@ -1,73 +1,75 @@
 # 📊 AtliQ Hardware Business Intelligence Project
 
-> An end-to-end Business Intelligence project built using **Power BI** to transform business data into meaningful insights through data modeling, validation, DAX, and interactive dashboards.
+> **A complete end-to-end Business Intelligence project built using Power BI, Power Query, DAX, SQL, and dimensional data modeling.**
+
+![Status](https://img.shields.io/badge/Status-In%20Progress-blue)
+![Power BI](https://img.shields.io/badge/Power%20BI-Project-yellow)
+![Version](https://img.shields.io/badge/Version-v1.0-success)
+![Learning](https://img.shields.io/badge/Learning-Business%20Intelligence-orange)
 
 ---
 
-## 🎯 Project Objective
+# 📌 Project Overview
 
-AtliQ Hardware is a multinational computer hardware manufacturer operating across multiple countries and sales channels.
+This project is based on a fictional multinational computer hardware manufacturer **AtliQ Hardware**.
 
-The objective of this project is to build a robust Business Intelligence solution that helps stakeholders answer strategic business questions related to sales, profitability, customer performance, product performance, and business growth.
+The objective is to transform raw transactional data into business-ready information and develop interactive Power BI dashboards that help stakeholders make informed business decisions.
 
----
-
-## 🚀 Current Progress
-
-### ✅ Completed
+The project follows an industry-oriented Business Intelligence workflow including:
 
 - Business Understanding
-- Data Collection
 - Data Exploration
-- Understanding Fact & Dimension Tables
-- Date Dimension Design
-- Fiscal Calendar Implementation
-
-### 🔄 In Progress
-
 - Data Validation
-
-### ⏳ Upcoming
-
-- Data Cleaning (Power Query)
 - Data Modeling
-- Relationships
-- DAX Measures
+- Power Query ETL
+- DAX Calculations
 - Dashboard Development
-- Business Insights
-- Executive Presentation
+- Business Storytelling
 
 ---
 
-## 🏢 Business Overview
+# 🎯 Business Objective
 
-AtliQ Hardware sells computer hardware products through three primary sales channels:
+AtliQ Hardware operates across **27 countries** and sells products through multiple customer channels including Retailers, Direct Sales, and Distributors.
 
-### Retailers
+The company wants to:
 
-- Brick & Mortar Stores
-- E-commerce Platforms
-
-### Direct Sales
-
-- AtliQ Exclusive Stores
-- Official Website
-- Mobile Application
-
-### Distributors
-
-Large distributors supplying products to smaller retailers.
+- Monitor financial performance
+- Track Net Sales and Gross Margin
+- Compare actual sales with forecasts
+- Identify underperforming markets
+- Improve business decision-making through interactive dashboards
 
 ---
 
-## 🗃 Dataset Overview
+# 🏢 Business Model
+
+AtliQ Hardware manufactures:
+
+- Desktop Computers
+- Laptops
+- Computer Accessories
+
+Customer Channels:
+
+- Retailers
+- Direct (AtliQ Exclusive Stores & Website)
+- Distributors
+
+Platforms:
+
+- Brick & Mortar
+- E-Commerce
+
+---
+
+# 🗂 Dataset Overview
 
 ### Dimension Tables
 
 - dim_customer
-- dim_market
 - dim_product
-- dim_date _(Created during this project)_
+- dim_market
 
 ### Fact Tables
 
@@ -81,87 +83,264 @@ Large distributors supplying products to smaller retailers.
 
 ---
 
-## 📅 Date Dimension
+# 🧱 Data Model
 
-A custom Date Dimension was created to support consistent time-based analysis across the entire data model.
+The project follows a **Star Schema**.
 
-### Columns Implemented
+Dimension tables provide descriptive information while fact tables contain business transactions and measurable metrics.
+
+---
+
+# 📅 Date Dimension
+
+A custom Date Dimension table was created containing:
 
 - Date
 - Day
 - Day Name
-- Month Number
+- Month
 - Month Name
-- Quarter
 - Calendar Year
-- Fiscal Month
-- Fiscal Quarter
 - Fiscal Year
+- Fiscal Quarter
+- Fiscal Month
+- Quarter
 
-### Fiscal Calendar
-
-AtliQ follows a fiscal calendar beginning on **1 September**.
-
-| Fiscal Quarter | Months               |
-| -------------- | -------------------- |
-| FQ1            | September – November |
-| FQ2            | December – February  |
-| FQ3            | March – May          |
-| FQ4            | June – August        |
+The fiscal year begins on **1 September**.
 
 ---
 
-## 🧠 Key Learning Outcomes
+# 🔄 ETL Pipeline
 
-During this phase, the following Business Intelligence concepts were explored:
+The data preparation process includes:
 
-- Business Understanding before Dashboard Development
-- Fact vs Dimension Tables
-- Business Process Thinking
-- Data Modeling Fundamentals
-- Calendar vs Fiscal Calendar
-- Date Dimension Design
-- Business KPI Fundamentals
-- Analyst Mindset
+### Data Validation
+
+- Benchmark validation
+- Relationship validation
+- KPI validation
+
+### Power Query
+
+- Reference Queries
+- Merge Queries
+- Append Queries
+- Dynamic Filtering
+- Custom Columns
+- Schema Standardization
 
 ---
 
-## 🛠 Technology Stack
+# 🚀 Dynamic ETL Implementation
+
+One of the key ETL improvements implemented in this project is the creation of a dynamic **Landing Estimate** table.
+
+Workflow:
+
+```text
+Sales
+      ↓
+LastSalesMonth (List.Max)
+
+      ↓
+
+Forecast
+(Filter records after latest sales month)
+
+      ↓
+
+Append
+
+      ↓
+
+fact_landing_estimate
+```
+
+This approach:
+
+- Eliminates hardcoded dates
+- Prevents overlapping Actual and Forecast records
+- Automatically adapts to new data after refresh
+- Supports scalable ETL design
+
+---
+
+# 💰 Financial Metrics Built
+
+Current financial calculations include:
+
+- Gross Sales Amount
+- Pre-Invoice Discount Amount
+- Net Invoice Sales
+
+Additional KPIs will be added during future development.
+
+---
+
+# 🛠 Technologies Used
 
 - Power BI Desktop
+- Power Query (M)
 - DAX
 - MySQL
-- GitHub
+- Data Modeling
+- Git & GitHub
 
 ---
 
-## 📈 Project Roadmap
+# 📚 Key Business Concepts Learned
 
-- ✅ Business Understanding
-- ✅ Data Exploration
-- ✅ Date Dimension
-- ⏳ Data Validation
-- ⏳ Power Query
-- ⏳ Data Modeling
-- ⏳ DAX
-- ⏳ Dashboard Development
-- ⏳ Business Storytelling
-- ⏳ Executive Presentation
-
----
-
-## 📚 Documentation
-
-This repository contains:
-
-- `README.md` — Project Overview
-- `BI_Analyst_Notebook.md` — Business Intelligence Learning Notes
-- `CHANGELOG.md` — Project Progress Log
+- Fact vs Dimension Tables
+- Star Schema
+- Primary & Foreign Keys
+- Fiscal Calendar
+- Dynamic ETL
+- Reference vs Duplicate Queries
+- Merge vs Append
+- Data Validation
+- Business Keys
+- Financial Data Modeling
 
 ---
 
-## 👨‍💻 Author
+# 📈 Current Project Status
+
+## ✅ Completed
+
+- Business Understanding
+- Dataset Exploration
+- Data Modeling
+- Date Dimension
+- Data Validation
+- Power Query Foundations
+- Dynamic ETL Pipeline
+- Landing Estimate Table
+- Financial Data Preparation
+
+## 🚧 In Progress
+
+- Power Query Transformations
+- Financial View
+
+## ⏳ Upcoming
+
+- DAX
+- Measures
+- Finance Dashboard
+- Sales Dashboard
+- Executive Dashboard
+- Business Storytelling
+- Performance Optimization
+
+---
+
+# 📂 Repository Structure
+
+```
+AtliQ-Hardware-BI/
+│
+├── README.md
+│
+├── docs/
+│   ├── The-BI-Playbook.md
+│   ├── Communication-Notebook.md
+│   ├── Interview-Insights.md
+│   ├── BI-Principles.md
+│   ├── Business-Glossary.md
+│   ├── PowerQuery-M-CheatSheet.md
+│   ├── ETL-Architecture.md
+│   └── Learning-Journal.md
+│
+├── pbix/
+│
+├── assets/
+│   ├── mockups/
+│   ├── screenshots/
+│   └── linkedin/
+│
+└── data/
+```
+
+---
+
+# 🧠 My Learning Philosophy
+
+This repository is more than a Power BI project.
+
+It documents my journey from beginner to Business Intelligence Analyst by focusing on:
+
+- Understanding business problems before building dashboards.
+- Learning the reasoning behind every technical decision.
+- Building production-style ETL pipelines instead of simply following tutorials.
+- Improving communication alongside technical skills.
+- Documenting concepts for long-term retention and interview preparation.
+
+---
+
+# 🚀 Project Roadmap
+
+```text
+Business Understanding
+        ✅
+
+Data Exploration
+        ✅
+
+Data Validation
+        ✅
+
+Power Query ETL
+        🚧
+
+Financial Metrics
+        🚧
+
+DAX
+        ⏳
+
+Dashboard Development
+        ⏳
+
+Business Storytelling
+        ⏳
+
+Portfolio Ready
+        ⏳
+```
+
+---
+
+# 📖 Documentation
+
+This repository contains a growing collection of structured documentation including:
+
+- The BI Playbook
+- Communication Notebook
+- Interview Preparation Notes
+- ETL Architecture
+- Power Query M Cheat Sheet
+- Business Glossary
+- BI Principles
+
+These documents capture not only _how_ each solution was implemented, but also _why_ each business and technical decision was made.
+
+---
+
+# 👨‍💻 Author
 
 **Saurav Verma**
 
-This repository documents my journey of learning Business Intelligence by solving a real-world Power BI case study.
+Aspiring Business Intelligence Analyst
+
+Currently learning:
+
+- Power BI
+- SQL
+- DAX
+- Power Query
+- Data Modeling
+- Business Intelligence
+
+---
+
+## ⭐ If you found this project interesting, consider giving it a Star.
